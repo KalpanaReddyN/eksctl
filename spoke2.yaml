@@ -1,0 +1,12 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: spoke2-cluster
+  region: us-east-1
+
+managedNodeGroups:
+  - name: spoke2-nodes
+    instanceType: m5.large
+    desiredCapacity: 2
+    spot: true
